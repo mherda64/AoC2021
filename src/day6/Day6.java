@@ -3,6 +3,7 @@ package day6;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.concurrent.TimeUnit;
 
 import static day6.Day6Const.numbers;
 
@@ -10,7 +11,11 @@ public class Day6 {
 
     public static void main(String[] args) {
 //        ex1();
+        var start = System.nanoTime();
         ex2();
+        var stop = System.nanoTime();
+
+        System.out.println(stop - start);
     }
 
     private static void ex1() {
@@ -61,7 +66,7 @@ public class Day6 {
             fishList.addLast(toMultiply);
             fishList.set(6, fishList.get(6) + toMultiply);
 
-            System.out.println("day " + (i + 1) + " " + fishList);
+//            System.out.println("day " + (i + 1) + " " + fishList);
         }
 
         long output = 0;
